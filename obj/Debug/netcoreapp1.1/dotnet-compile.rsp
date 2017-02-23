@@ -163,5 +163,9 @@
 --reference:/Users/clbo/.nuget/packages/System.Threading.Timer/4.3.0/ref/netstandard1.2/System.Threading.Timer.dll
 --reference:/Users/clbo/.nuget/packages/System.Xml.ReaderWriter/4.3.0/ref/netstandard1.3/System.Xml.ReaderWriter.dll
 --reference:/Users/clbo/.nuget/packages/System.Xml.XDocument/4.3.0/ref/netstandard1.3/System.Xml.XDocument.dll
+--resource:"/Users/clbo/Google Drive/KEA_Macbook/dotnet/03_mvc_folder/03_code_from_teachings/obj/Debug/netcoreapp1.1/03_code_from_teachingsdotnet-compile.deps.json",03_code_from_teachings.deps.json
 /Users/clbo/Google Drive/KEA_Macbook/dotnet/03_mvc_folder/03_code_from_teachings/Program.cs
 /Users/clbo/Google Drive/KEA_Macbook/dotnet/03_mvc_folder/03_code_from_teachings/Startup.cs
+/Users/clbo/Google Drive/KEA_Macbook/dotnet/03_mvc_folder/03_code_from_teachings/Controllers/AdminController.cs
+/Users/clbo/Google Drive/KEA_Macbook/dotnet/03_mvc_folder/03_code_from_teachings/Controllers/HomeController.cs
+/Users/clbo/Google Drive/KEA_Macbook/dotnet/03_mvc_folder/03_code_from_teachings/Models/Student.cs
