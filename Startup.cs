@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace ConsoleApplication
 {
@@ -11,8 +12,10 @@ namespace ConsoleApplication
             servises.AddMvc();
         }
 
-       public void Configure(IApplicationBuilder app)
+       public void Configure(IApplicationBuilder app, ILoggerFactory logger)
        {
+           // Log to the Console
+           logger.AddConsole();
             app.UseMvcWithDefaultRoute();
        }
     }

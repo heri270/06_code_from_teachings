@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using ConsoleApplication.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,19 +11,31 @@ namespace ConsoleApplication.Controllers
 {
     public class HomeController : Controller
     {
+
+        MyDbContext db = new MyDbContext();
+
         // GET: /<controller>/
         public IActionResult Index()
         {
+            // db.Students.Add(new Student()
+            // {
+            //     FirstName = "Claus", 
+            //     LastName = "Bove",
+            //     EnrollmenDate = new DateTime(1990,10,22)
+            // });
+            // db.SaveChanges();
 
-            List<Student> students = new List<Student>();
-            students.Add(new Student("Claus", 34));
-            students.Add(new Student("Clausfdsdfs", 34));
-            students.Add(new Student("Claussdfsdfsdfdsfds", 34));
-
+            List<Student> students = db.Students.ToList();
 
             ViewBag.Y = students;
             return View();
         }
+
+        // Create
+
+        // Delete
+
+        // Update
 
         public IActionResult About()
         {

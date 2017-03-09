@@ -1,15 +1,15 @@
+using System;
+
 namespace ConsoleApplication.Models 
 {
     public class Student
     {
-        public Student(string name, int age)
-        {
-            Name = name;
-            Age = age;
-        }
-
-        public string Name { get; set; }
-        public int Age { get; set; }
+        // POCO Classes
+        // Plain Old CLR Object
+        public int StudentID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public DateTime EnrollmenDate { get; set; }
 
     }
 }
