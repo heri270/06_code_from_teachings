@@ -24,9 +24,17 @@ namespace ConsoleApplication.Controllers
         [HttpPost]
         public IActionResult Create(Student st)
         {
-            db.Students.Add(st);
-            db.SaveChanges();
-            return View();
+            if(ModelState.IsValid)
+            {
+                db.Students.Add(st);
+                 db.SaveChanges();
+                 return RedirectToAction("Index");
+
+            } else 
+            {
+                return View();
+            }
+            
         }
 
         //Delete

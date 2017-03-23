@@ -1,4 +1,5 @@
 @model ConsoleApplication.Models.Student
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -12,9 +13,11 @@
     <form action="/Student/Create/" method="POST">
         <input asp-for="StudentID" >
         <label asp-validation=""></label>
-        <input type="text" name="FirstName">
-        <input type="text" name="LastName">
-        <input type="text" name="EnrollmenDate">
+        <input asp-for="FirstName">
+
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" >
+        <input asp-for="EnrollmenDate">
         <input type="Submit" value="Send">
     </form>
     </body>
