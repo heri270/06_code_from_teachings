@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace _04_code_from_teachings.Migrations
+namespace _05_code_from_teachings.Migrations
 {
-    public partial class first : Migration
+    public partial class test2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,8 +14,9 @@ namespace _04_code_from_teachings.Migrations
                 {
                     StudentID = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    Age = table.Column<int>(nullable: false),
                     EnrollmenDate = table.Column<DateTime>(nullable: false),
-                    FirstName = table.Column<string>(nullable: true),
+                    FirstName = table.Column<string>(nullable: false),
                     LastName = table.Column<string>(nullable: true)
                 },
                 constraints: table =>

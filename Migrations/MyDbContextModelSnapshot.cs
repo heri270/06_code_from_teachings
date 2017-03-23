@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using ConsoleApplication.Models;
 
-namespace _04_code_from_teachings.Migrations
+namespace _05_code_from_teachings.Migrations
 {
     [DbContext(typeof(MyDbContext))]
     partial class MyDbContextModelSnapshot : ModelSnapshot
@@ -24,7 +24,8 @@ namespace _04_code_from_teachings.Migrations
 
                     b.Property<DateTime>("EnrollmenDate");
 
-                    b.Property<string>("FirstName");
+                    b.Property<string>("FirstName")
+                        .IsRequired();
 
                     b.Property<string>("LastName");
 

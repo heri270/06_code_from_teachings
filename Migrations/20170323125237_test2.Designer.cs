@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using ConsoleApplication.Models;
 
-namespace _04_code_from_teachings.Migrations
+namespace _05_code_from_teachings.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20170309144550_third")]
-    partial class third
+    [Migration("20170323125237_test2")]
+    partial class test2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -25,7 +25,8 @@ namespace _04_code_from_teachings.Migrations
 
                     b.Property<DateTime>("EnrollmenDate");
 
-                    b.Property<string>("FirstName");
+                    b.Property<string>("FirstName")
+                        .IsRequired();
 
                     b.Property<string>("LastName");
 
