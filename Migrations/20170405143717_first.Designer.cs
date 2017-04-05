@@ -8,8 +8,8 @@ using ConsoleApplication.Models;
 namespace _05_code_from_teachings.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20170323125237_test2")]
-    partial class test2
+    [Migration("20170405143717_first")]
+    partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

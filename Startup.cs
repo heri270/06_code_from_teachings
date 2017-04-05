@@ -1,3 +1,4 @@
+using ConsoleApplication.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -9,14 +10,25 @@ namespace ConsoleApplication
 
         public void ConfigureServices(IServiceCollection servises)
         {
+            // 3. register you db context so it can be used, and run again --- thats it! 
+            servises.AddDbContext<MyDbContext>();
+            // 4. Now delete your database, and your migrations
+            // do a:
+            //       dotnet ef migrations add first
+            //       dotnet ef database update
+            //       dotnet run
             servises.AddMvc();
         }
 
-       public void Configure(IApplicationBuilder app, ILoggerFactory logger)
+       public void Configure(IApplicationBuilder app, ILoggerFactory logger, MyDbContext context) // 1. add a context parameter
        {
-           // Log to the Console
-           logger.AddConsole();
+            // Log to the Console
+            logger.AddConsole();
             app.UseMvcWithDefaultRoute();
+            DbInitializer.Initialize(context);  // 2. add this and run the program
+                                                // You will get a runtime error:
+                                                // No service for type 'ConsoleApplication.Models.MyDbContext' has been registered.
+                                                // 
        }
     }
 }
