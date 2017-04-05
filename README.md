@@ -1,2 +1,2 @@
-# 03 Code from teachings
-Code used during MVC teachings the 23/2-2017
+# 06 Code from teachings
+Code used during Client Side Development teachings the 6/4-2017
