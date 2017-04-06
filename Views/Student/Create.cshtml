@@ -16,30 +16,30 @@
             </div>
             <div class="form">
                 <form action="/Student/Create/" method="POST">
-                    <div class="row">
+                    <p>
                         <label asp-for="StudentID"></label>
                         <input asp-for="StudentID" placeholder="ID of student here">
-                    </div>
+                    </p>
                     <!--<label asp-validation=""></label>-->
-                    <div class="row">
+                    <p>
                         <label asp-for="FirstName"></label>
                         <input asp-for="FirstName" placeholder="First name here">
-                    </div>
-                    <div class="row">
+                    </p>
+                    <p>
                         <label asp-for="LastName"></label>
                         <input asp-for="LastName" placeholder="Last name here">
-                    </div>
-                    <div class="row">
+                    </p>
+                    <p>
                         <label asp-for="Age"></label>
                         <input asp-for="Age" placeholder="Age of student here">
-                    </div>
-                    <div class="row">
+                    </p>
+                    <p>
                         <label asp-for="EnrollmenDate"></label>
                         <input asp-for="EnrollmenDate">
-                    </div>
-                    <div class="row">
+                    </p>
+                    <p>
                         <a class="btn btn-primary" type="Submit" value="Send" asp-controller="Student" asp-action="Index">Send</a>
-                    </div>
+                    </p>
                 </form>
             </div>
         </div>
