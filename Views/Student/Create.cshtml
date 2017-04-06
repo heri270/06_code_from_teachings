@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link href="css/style.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
     </head>
     <body>
         <div class="container">
@@ -16,24 +16,30 @@
             </div>
             <div class="form">
                 <form action="/Student/Create/" method="POST">
-                    <label asp-for="StudentID"></label>
-                    <input asp-for="StudentID" placeholder="ID of student here">
-
-                    <label asp-validation=""></label>
-
-                    <label asp-for="FirstName"></label>
-                    <input asp-for="FirstName" placeholder="First name here">
-
-                    <label asp-for="LastName"></label>
-                    <input asp-for="LastName" placeholder="Last name here">
-
-                    <label asp-for="Age"></label>
-                    <input asp-for="Age" placeholder="Age of student here">
-
-                    <label asp-for="EnrollmenDate"></label>
-                    <input asp-for="EnrollmenDate">
-
-                    <a class="btn btn-primary" type="Submit" value="Send" asp-controller="Student" asp-action="Index">Send</a>
+                    <div class="row">
+                        <label asp-for="StudentID"></label>
+                        <input asp-for="StudentID" placeholder="ID of student here">
+                    </div>
+                    <!--<label asp-validation=""></label>-->
+                    <div class="row">
+                        <label asp-for="FirstName"></label>
+                        <input asp-for="FirstName" placeholder="First name here">
+                    </div>
+                    <div class="row">
+                        <label asp-for="LastName"></label>
+                        <input asp-for="LastName" placeholder="Last name here">
+                    </div>
+                    <div class="row">
+                        <label asp-for="Age"></label>
+                        <input asp-for="Age" placeholder="Age of student here">
+                    </div>
+                    <div class="row">
+                        <label asp-for="EnrollmenDate"></label>
+                        <input asp-for="EnrollmenDate">
+                    </div>
+                    <div class="row">
+                        <a class="btn btn-primary" type="Submit" value="Send" asp-controller="Student" asp-action="Index">Send</a>
+                    </div>
                 </form>
             </div>
         </div>
