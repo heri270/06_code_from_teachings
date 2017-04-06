@@ -6,19 +6,36 @@
         <title>Create Student</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-    <h1>Create Student</h1>
-    <form action="/Student/Create/" method="POST">
-        <input asp-for="StudentID" >
-        <label asp-validation=""></label>
-        <input asp-for="FirstName">
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Create Student</h1>
+            </div>
+            <div class="form">
+                <form action="/Student/Create/" method="POST">
+                    <label asp-for="StudentID"></label>
+                    <input asp-for="StudentID" placeholder="ID of student here">
 
-        <label asp-for="LastName"></label>
-        <input asp-for="LastName" >
-        <input asp-for="EnrollmenDate">
-        <input type="Submit" value="Send">
-    </form>
+                    <label asp-validation=""></label>
+
+                    <label asp-for="FirstName"></label>
+                    <input asp-for="FirstName" placeholder="First name here">
+
+                    <label asp-for="LastName"></label>
+                    <input asp-for="LastName" placeholder="Last name here">
+
+                    <label asp-for="Age"></label>
+                    <input asp-for="Age" placeholder="Age of student here">
+
+                    <label asp-for="EnrollmenDate"></label>
+                    <input asp-for="EnrollmenDate">
+
+                    <a class="btn btn-primary" type="Submit" value="Send" asp-controller="Student" asp-action="Index">Send</a>
+                </form>
+            </div>
+        </div>
     </body>
 </html>

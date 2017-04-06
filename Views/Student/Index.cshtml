@@ -10,32 +10,36 @@
 </head>
 <body>
     <div class="container">
-        <div class="jumbotron" style="margin-top: 30px">
+        <div class="jumbotron">
             <h1>Students</h1>
         </div>
         <div class="newStudent">
-            <button type="button" class="btn btn-success" style="margin-bottom: 10px">New Student</button>
+            <a class="btn btn-success" style="margin-bottom: 10px" asp-controller="Student" asp-action="Create">New Student</a>
         </div>
         <div class="table">
             <table class="table table-striped">
-                <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Enrollment Date</th>
-                    <th>Age</th>
-                    <th>Enrollments</th>
-                </tr>
+                <thead>
+                    <tr>
+                    <th>@Html.DisplayNameFor(model => model.StudentID)</th>
+                    <th>@Html.DisplayNameFor(model => model.FirstName)</th>
+                    <th>@Html.DisplayNameFor(model => model.LastName)</th>
+                    <th>@Html.DisplayNameFor(model => model.EnrollmenDate)</th>
+                    <th>@Html.DisplayNameFor(model => model.Age)</th>
+                    <th></th>
+                    </tr>
+                </thead>
                 @foreach(var st in Model)
                 {
                     <tr>
+                        <td>@st.StudentID</td>
                         <td>@st.FirstName</td>
                         <td>@st.LastName</td>
                         <td>@st.EnrollmenDate</td>
                         <td>@st.Age</td>
                         <td>
-                            <button type="button" class="btn btn-primary">Edit</button>
-                            <button type="button" class="btn btn-danger">Delete</button>
-                            <button type="button" class="btn btn-info">Details</button>
+                            <a class="btn btn-primary" asp-controller="Student" asp-action="Edit">Edit</a>
+                            <a class="btn btn-danger" asp-controller="Student" asp-action="Delete">Delete</a>
+                            <a class="btn btn-info" asp-controller="Student" asp-action="Details">Details</a>
                         </td>
                     </tr>
                     }
