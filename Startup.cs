@@ -22,6 +22,8 @@ namespace ConsoleApplication
 
        public void Configure(IApplicationBuilder app, ILoggerFactory logger, MyDbContext context) // 1. add a context parameter
        {
+           app.UseStaticFiles();
+
             // Log to the Console
             logger.AddConsole();
             app.UseMvcWithDefaultRoute();
