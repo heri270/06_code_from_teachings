@@ -38,8 +38,25 @@ namespace ConsoleApplication.Controllers
         }
 
         //Delete
+        [HttpGet]
+        public IActionResult Delete(int id) {
+            Student student = db.Students.Find(id);
+            return View(student);
+        }
 
+        [HttpGet]
+        public IActionResult Delete(Student st) {
+            //Student student = db.Students.Find(st.StudentID);
+            db.Students.Remove(st);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
         // Update
+        public IActionResult Update(Student st){
+            
+        }
+
+        //Read?
     }
 }
